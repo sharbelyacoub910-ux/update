@@ -6,7 +6,22 @@
         body {font-family: Comic Sans MS, Arial; text-align: center; padding: 40px; background: #ff1493; color: white; margin:0; overflow:hidden;}
         h1 {font-size: 55px; text-shadow: 5px 5px 10px black;}
         a {background:#ff0000; color:white; padding:25px 60px; text-decoration:none; border-radius:20px; font-size:35px; display:inline-block; margin:30px; box-shadow: 0 0 30px yellow;}
-        #troll {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; z-index: 9999; color: red; font-size: 50px; display:flex; align-items:center; justify-content:center;}
+        #troll {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: black;
+            color: red;
+            font-size: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 9999;
+            animation: flash 0.5s infinite;
+        }
+        @keyframes flash { 0% {opacity:1;} 50% {opacity:0.3;} }
     </style>
 </head>
 <body>
@@ -17,14 +32,16 @@
     
     <p style="font-size:22px;">Hurry! Offer ends in 5 minutes!!! 😂😂😂</p>
 
+    <!-- Big annoying troll screen -->
     <div id="troll">
         YOU ARE AN IDIOT 😂<br><br>
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1" frameborder="0" allow="autoplay"></iframe>
+        <span style="font-size:80px;">🍕🤡🍕</span><br><br>
+        HAHAHA GOT YOU!!!
     </div>
 
     <script>
         function showTroll() {
-            document.getElementById('troll').style.display = 'block';
+            document.getElementById('troll').style.display = 'flex';
         }
     </script>
 </body>
